@@ -1,0 +1,11 @@
+name: ruff
+
+on: [push, pull_request]
+
+jobs:
+  codespell:
+    name: Format and lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make qa
