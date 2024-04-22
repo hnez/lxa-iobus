@@ -51,7 +51,7 @@ build: packaging-env
 
 _release: build
 	. $(PYTHON_PACKAGING_VENV)/bin/activate && \
-	twine upload dist/*
+	twine upload --repository test.pypi.org dist/*
 
 # testing #####################################################################
 $(PYTHON_TESTING_ENV)/.created:
